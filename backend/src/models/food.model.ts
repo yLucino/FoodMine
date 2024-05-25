@@ -1,4 +1,4 @@
-import { model, Schema } from "mongoose";
+import { Schema, model } from "mongoose";
 
 export interface Food {
   id: string;
@@ -13,6 +13,7 @@ export interface Food {
 
 export const FoodSchema = new Schema<Food>(
   {
+    // id: { type: String, required: true },
     name: { type: String, required: true},
     price: { type: Number, required: true},
     tags: { type: [String]},
