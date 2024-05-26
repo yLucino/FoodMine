@@ -37,7 +37,7 @@ router.post("/login", asyncHandler(
   }
 ))
 
-router.post('/resgister', asyncHandler(
+router.post('/register', asyncHandler(
   async (req, res) => {
     const {name, email, password, address} = req.body;
     const user = await UserModel.findOne({email});

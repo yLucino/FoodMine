@@ -54,7 +54,7 @@ export const sample_users: any[] = [
     name: "Luciano Chiodini",
     email: "chiodiniluciano@gmail.com",
     password: "224322",
-    address: "Brazil",
+    address: "Brazil Santa Catarina",
     asAdmin: false,
   },
 ];
