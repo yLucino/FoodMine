@@ -29,8 +29,8 @@ router.post("/login", asyncHandler(
     if (user) {
       res.send(generateTokenResponse(user));
       //view token in console:
-      // const token = generateTokenResponse(user)
-      // console.log(token)
+      const token = generateTokenResponse(user)
+      console.log(token)
     } else {
       res.status(HTTP_BAD_REQUEST).send("Username or password is invalid!");
     }
@@ -46,13 +46,15 @@ router.post('/register', asyncHandler(
       return;
     }
 
-    const encryptedPassword = await bcrypt.hash(password, 10);
+    // criptografica senha ??
+    // const encryptedPassword = await bcrypt.hash(password, 10);
     
     const newUser: User = {
       id: '',
       name,
       email: email.toLowerCase(),
-      password: encryptedPassword,
+      // password: encryptedPassword,
+      password,
       address,
       asAdmin: false,
       token: ""
